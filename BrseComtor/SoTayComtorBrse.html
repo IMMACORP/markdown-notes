@@ -1,0 +1,725 @@
+<!DOCTYPE html><html><head>
+      <title>SoTayComtorBrse</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\DungDo2\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <ul>
+<li><a href="#1-m%E1%BB%A5c-%C4%91%C3%ADch">1. M&#x1EE4;C &#x110;&#xCD;CH</a></li>
+<li><a href="#2-ph%E1%BA%A1m-vi-%C3%A1p-d%E1%BB%A5ng">2. PH&#x1EA0;M VI &#xC1;P D&#x1EE4;NG</a></li>
+<li><a href="#3-thu%E1%BA%ADt-ng%E1%BB%AF-%C4%91%E1%BB%8Bnh-ngh%C4%A9a">3. THU&#x1EAC;T NG&#x1EEE;, &#x110;&#x1ECA;NH NGH&#x128;A</a>
+<ul>
+<li><a href="#31ph%C3%A2n-lo%E1%BA%A1i-d%E1%BB%B1-%C3%A1n">3.1.Ph&#xE2;n lo&#x1EA1;i d&#x1EF1; &#xE1;n</a></li>
+<li><a href="#32ph%C3%A2n-lo%E1%BA%A1i-kh%C3%A1ch-h%C3%A0ng">3.2.Ph&#xE2;n lo&#x1EA1;i kh&#xE1;ch h&#xE0;ng</a></li>
+</ul>
+</li>
+<li><a href="#4n%E1%BB%99i-dung">4.N&#x1ED8;I DUNG</a>
+<ul>
+<li><a href="#41-tr%C3%A1ch-nhi%E1%BB%87m-c%E1%BB%A7a-brseit-comtor-trong-d%E1%BB%B1-%C3%A1n">4.1. Tr&#xE1;ch nhi&#x1EC7;m c&#x1EE7;a Brse/IT Comtor trong d&#x1EF1; &#xE1;n</a>
+<ul>
+<li><a href="#411-vai-tr%C3%B2">4.1.1. Vai tr&#xF2;</a></li>
+<li><a href="#412-gi%E1%BB%9Bi-h%E1%BA%A1n-ph%E1%BA%A1m-vi-tr%C3%A1ch-nhi%E1%BB%87m-c%E1%BB%A7a-brseit-comtor">4.1.2. Gi&#x1EDB;i h&#x1EA1;n ph&#x1EA1;m vi tr&#xE1;ch nhi&#x1EC7;m c&#x1EE7;a Brse/IT Comtor</a></li>
+</ul>
+</li>
+<li><a href="#42-n%E1%BB%99i-dung-chi-ti%E1%BA%BFt-c%C3%B4ng-vi%E1%BB%87c">4.2. N&#x1ED9;i dung chi ti&#x1EBF;t c&#xF4;ng vi&#x1EC7;c</a>
+<ul>
+<li><a href="#421-kh%E1%BB%9Fi-t%E1%BA%A1o-d%E1%BB%B1-%C3%A1n-support-pm-d%E1%BB%B1-%C3%A1n">4.2.1. Kh&#x1EDF;i t&#x1EA1;o d&#x1EF1; &#xE1;n (Support PM d&#x1EF1; &#xE1;n)</a></li>
+<li><a href="#422-l%E1%BA%ADp-k%E1%BA%BF-ho%E1%BA%A1ch-d%E1%BB%B1-%C3%A1n">4.2.2. L&#x1EAD;p k&#x1EBF; ho&#x1EA1;ch d&#x1EF1; &#xE1;n</a></li>
+<li><a href="#423-startup-d%E1%BB%B1-%C3%A1n">4.2.3. Startup d&#x1EF1; &#xE1;n</a></li>
+<li><a href="#424-d%E1%BB%B1-%C3%A1n-ch%E1%BA%A1y-%E1%BB%95n-%C4%91%E1%BB%8Bnh">4.2.4. D&#x1EF1; &#xE1;n ch&#x1EA1;y &#x1ED5;n &#x111;&#x1ECB;nh</a></li>
+<li><a href="#425-n%E1%BB%99p-h%C3%A0ng">4.2.5. N&#x1ED9;p h&#xE0;ng</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5-c%C3%A1c-ch%C3%BA-%C3%BD-%C4%91%E1%BA%B7c-bi%E1%BB%87t-v%E1%BB%9Bi-t%E1%BB%ABng-lo%E1%BA%A1i-kh%C3%A1ch-h%C3%A0ng-v%C3%A0-lo%E1%BA%A1i-d%E1%BB%B1-%C3%A1n-c%E1%BB%A5-th%E1%BB%83">5. C&#xC1;C CH&#xDA; &#xDD; &#x110;&#x1EB6;C BI&#x1EC6;T V&#x1EDA;I T&#x1EEA;NG LO&#x1EA0;I KH&#xC1;CH H&#xC0;NG V&#xC0; LO&#x1EA0;I D&#x1EF0; &#xC1;N C&#x1EE4; TH&#x1EC2;</a>
+<ul>
+<li><a href="#51-kh%C3%A1ch-h%C3%A0ng-enduser-kh%C3%B4ng-c%C3%B3-%C4%91%E1%BB%99i-ng%C5%A9-qu%E1%BA%A3n-l%C3%BD-v%C3%A0-l%C3%A0m-offshore-chuy%C3%AAn-nghi%E1%BB%87p">5.1. Kh&#xE1;ch h&#xE0;ng enduser kh&#xF4;ng c&#xF3; &#x111;&#x1ED9;i ng&#x169; qu&#x1EA3;n l&#xFD; v&#xE0; l&#xE0;m offshore chuy&#xEA;n nghi&#x1EC7;p</a></li>
+<li><a href="#52-kh%C3%A1ch-h%C3%A0ng-enduser-c%C3%B3--%C4%91%E1%BB%99i-ng%C5%A9-qu%E1%BA%A3n-l%C3%BD-v%C3%A0-l%C3%A0m-offshore-chuy%C3%AAn-nghi%E1%BB%87p">5.2. Kh&#xE1;ch h&#xE0;ng enduser c&#xF3;  &#x111;&#x1ED9;i ng&#x169; qu&#x1EA3;n l&#xFD; v&#xE0; l&#xE0;m offshore chuy&#xEA;n nghi&#x1EC7;p</a></li>
+<li><a href="#53-kh%C3%A1ch-h%C3%A0ng-l%C3%A0-c%C3%A1c-c%C3%B4ng-ty-th%C6%B0%C6%A1ng-m%E1%BA%A1i">5.3. Kh&#xE1;ch h&#xE0;ng l&#xE0; c&#xE1;c c&#xF4;ng ty th&#x1B0;&#x1A1;ng m&#x1EA1;i</a></li>
+<li><a href="#54-d%E1%BB%B1-%C3%A1n-odc">5.4. D&#x1EF1; &#xE1;n ODC</a></li>
+</ul>
+</li>
+<li><a href="#6-n%C3%A2ng-cao">6. N&#xE2;ng cao</a>
+<ul>
+<li><a href="#it-phrases">IT Phrases</a></li>
+<li><a href="#basic-web">Basic web</a></li>
+<li><a href="#business-mail">Business mail</a></li>
+</ul>
+</li>
+<li><a href="#template">Template</a></li>
+</ul>
+<h1 class="mume-header" id="1-m%E1%BB%A5c-%C4%91%C3%ADch">1. M&#x1EE4;C &#x110;&#xCD;CH</h1>
+
+<p>Kh&#xE1;i qu&#xE1;t t&#x1ED5;ng quan c&#xE1;c c&#xF4;ng vi&#x1EC7;c, ph&#x1EA1;m vi tr&#xE1;ch nhi&#x1EC7;m c&#x1EE7;a Brse/IT Comtor khi tham gia v&#xE0;o m&#x1ED9;t d&#x1EF1; &#xE1;n theo &#x111;&#xFA;ng c&#xE1;c quy tr&#xEC;nh, quy &#x111;&#x1ECB;nh c&#x1EE7;a C&#xF4;ng ty v&#xE0; Division; &#x111;&#x1ED3;ng th&#x1EDD;i, cung c&#x1EA5;p m&#x1ED9;t s&#x1ED1; kinh nghi&#x1EC7;m h&#x1ED7; tr&#x1EE3; &#x111;&#x1EC3; th&#x1EF1;c hi&#x1EC7;n c&#xF4;ng vi&#x1EC7;c/tr&#xE1;ch nhi&#x1EC7;m hi&#x1EC7;u qu&#x1EA3; v&#xE0; n&#x103;ng su&#x1EA5;t h&#x1A1;n.</p>
+<h1 class="mume-header" id="2-ph%E1%BA%A1m-vi-%C3%A1p-d%E1%BB%A5ng">2. PH&#x1EA0;M VI &#xC1;P D&#x1EE4;NG</h1>
+
+<p>Brse/IT Comtor v&#xE0; c&#xE1;c v&#x1ECB; tr&#xED; kh&#xE1;c c&#xF3; giao ti&#x1EBF;p kh&#xE1;ch h&#xE0;ng trong c&#xE1;c d&#x1EF1; &#xE1;n c&#x1EE7;a C&#xF4;ng ty C&#x1ED5; ph&#x1EA7;n Ph&#x1EA7;n m&#x1EC1;m Amela</p>
+<h1 class="mume-header" id="3-thu%E1%BA%ADt-ng%E1%BB%AF-%C4%91%E1%BB%8Bnh-ngh%C4%A9a">3. THU&#x1EAC;T NG&#x1EEE;, &#x110;&#x1ECA;NH NGH&#x128;A</h1>
+
+<table>
+<thead>
+<tr>
+<th>stt</th>
+<th>Thu&#x1EAD;t ng&#x1EEF;</th>
+<th>Gi&#x1EA3;i th&#xED;ch b&#x1ED5; sung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>D&#x1EF1; &#xE1;n</td>
+<td>D&#x1EF1; &#xE1;n ph&#xE1;t tri&#x1EC3;n ph&#x1EA7;n m&#x1EC1;m th&#x1EF1;c hi&#x1EC7;n trong c&#xF4;ng ty Amela, bao g&#x1ED3;m c&#x1EA3; d&#x1EF1; &#xE1;n ph&#xE1;t tri&#x1EC3;n ph&#x1EA7;n m&#x1EC1;m tr&#x1ECD;n g&#xF3;i v&#xE0; d&#x1EF1; &#xE1;n b&#x1EA3;o tr&#xEC; h&#x1EC7; th&#x1ED1;ng ph&#x1EA7;n m&#x1EC1;m.<br>Tham kh&#x1EA3;o ph&#xE2;n lo&#x1EA1;i d&#x1EF1; &#xE1;n</td>
+</tr>
+<tr>
+<td>2</td>
+<td>SALE</td>
+<td>L&#xE0; ng&#x1B0;&#x1EDD;i ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m kinh doanh (&#x111;&#x1ECB;nh h&#x1B0;&#x1EDB;ng ph&#xE1;t tri&#x1EC3;n, k&#x1EBF; ho&#x1EA1;ch th&#x1EF1;c thi chung) li&#xEA;n quan &#x111;&#x1EBF;n c&#xF4;ng vi&#x1EC7;c hay kh&#xE1;ch h&#xE0;ng c&#x1EE5; th&#x1EC3;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>PM</td>
+<td>L&#xE0; ng&#x1B0;&#x1EDD;i ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m cao nh&#x1EA5;t cho vi&#x1EC7;c ho&#xE0;n th&#xE0;nh d&#x1EF1; &#xE1;n v&#x1EDB;i k&#xEC; h&#x1EA1;n v&#xE0; ch&#x1EA5;t l&#x1B0;&#x1EE3;ng cam k&#x1EBF;t</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Brse/IT Comtor</td>
+<td>L&#xE0; ng&#x1B0;&#x1EDD;i th&#x1EF1;c hi&#x1EC7;n c&#xF4;ng vi&#x1EC7;c &#x111;i&#x1EC1;u ph&#x1ED1;i &amp; qu&#x1EA3;n l&#xFD; giao ti&#x1EBF;p gi&#x1EEF;a kh&#xE1;ch h&#xE0;ng v&#xE0; &#x111;&#x1ED9;i d&#x1EF1; &#xE1;n , ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m v&#x1EC1; &#x111;&#x1ED9; ch&#xED;nh x&#xE1;c, t&#xED;nh tin c&#x1EAD;y c&#x1EE7;a c&#xE1;c th&#xF4;ng tin trong d&#x1EF1; &#xE1;n, c&#x1EE5; th&#x1EC3; g&#x1ED3;m c&#xE1;c lo&#x1EA1;i th&#xF4;ng tin sau :<br>- Th&#xF4;ng tin y&#xEA;u c&#x1EA7;u<br>- Th&#xF4;ng tin trao &#x111;&#x1ED5;i- Th&#xF4;ng tin b&#xE1;o c&#xE1;o</td>
+</tr>
+<tr>
+<td>5</td>
+<td>TL</td>
+<td>L&#xE0; ng&#x1B0;&#x1EDD;i tr&#x1EF1;c ti&#x1EBF;p th&#x1EF1;c hi&#x1EC7;n d&#x1EF1; &#xE1;n, ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m trong ph&#x1EA1;m vi PM ch&#x1EC9; &#x111;&#x1ECB;nh</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Kh&#xE1;ch h&#xE0;ng</td>
+<td>L&#xE0; c&#xF4;ng ty &#x111;&#x1EB7;t h&#xE0;ng Amela th&#x1EF1;c hi&#x1EC7;n d&#x1EF1; &#xE1;n ph&#xE1;t tri&#x1EC3;n ph&#x1EA7;n m&#x1EC1;m.<br> Trong d&#x1EF1; &#xE1;n t&#x1EEB; &#x201C;Kh&#xE1;ch h&#xE0;ng&#x201D; c&#x169;ng &#x111;&#x1B0;&#x1EE3;c d&#xF9;ng &#x111;&#x1EC3; ch&#x1EC9; c&#xE1;c ng&#x1B0;&#x1EDD;i giao ti&#x1EBF;p tr&#x1EF1;c ti&#x1EBF;p v&#x1EDB;i &#x111;&#x1ED9;i d&#x1EF1; &#xE1;n Amela. <br><a href="#32ph%C3%A2n-lo%E1%BA%A1i-kh%C3%A1ch-h%C3%A0ng">Tham kh&#x1EA3;o ph&#xE2;n lo&#x1EA1;i kh&#xE1;ch</a></td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="31ph%C3%A2n-lo%E1%BA%A1i-d%E1%BB%B1-%C3%A1n">3.1.Ph&#xE2;n lo&#x1EA1;i d&#x1EF1; &#xE1;n</h2>
+
+<table>
+<thead>
+<tr>
+<th>stt</th>
+<th>Lo&#x1EA1;i d&#x1EF1; &#xE1;n</th>
+<th>Gi&#x1EA3;i th&#xED;ch b&#x1ED5; sung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>D&#x1EF1; &#xE1;n fixed price</td>
+<td>D&#x1EF1; &#xE1;n ph&#xE1;t tri&#x1EC3;n tr&#x1ECD;n g&#xF3;i ph&#x1EA7;n m&#x1EC1;m</td>
+</tr>
+<tr>
+<td>2</td>
+<td>D&#x1EF1; &#xE1;n Labo</td>
+<td>D&#x1EF1; &#xE1;n kh&#xE1;ch h&#xE0;ng thu&#xEA; theo s&#x1ED1; ng&#x1B0;&#x1EDD;i c&#x1ED1; &#x111;&#x1ECB;nh h&#xE0;ng th&#xE1;ng</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="32ph%C3%A2n-lo%E1%BA%A1i-kh%C3%A1ch-h%C3%A0ng">3.2.Ph&#xE2;n lo&#x1EA1;i kh&#xE1;ch h&#xE0;ng</h2>
+
+<table>
+<thead>
+<tr>
+<th>stt</th>
+<th>Lo&#x1EA1;i kh&#xE1;ch h&#xE0;ng</th>
+<th>Gi&#x1EA3;i th&#xED;ch b&#x1ED5; sung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>C&#xF4;ng ty SI chuy&#xEA;n nghi&#x1EC7;p</td>
+<td>C&#xF4;ng ty chuy&#xEA;n ph&#xE1;t tri&#x1EC3;n ph&#x1EA7;n m&#x1EC1;m c&#x1EE7;a Nh&#x1EAD;t, c&#xF3; c&#xE1;ch l&#xE0;m vi&#x1EC7;c quy c&#x1EE7; , chuy&#xEA;n nghi&#x1EC7;p</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Enduser c&#xF3; &#x111;&#x1ED9;i ng&#x169; qu&#x1EA3;n l&#xFD; v&#xE0; l&#xE0;m offshore chuy&#xEA;n nghi&#x1EC7;p</td>
+<td>C&#xF4;ng ty s&#x1EED; d&#x1EE5;ng ph&#x1EA7;n m&#x1EC1;m ph&#x1EE5;c v&#x1EE5; cho m&#x1EE5;c &#x111;&#xED;ch kinh doanh ch&#xED;nh, c&#xF3; &#x111;&#x1ED9;i k&#x129; s&#x1B0; &#x111;&#x1B0;&#x1EE3;c t&#x1ED5; ch&#x1EE9;c t&#x1ED1;t v&#xE0; quen giao vi&#x1EC7;c ph&#xE1;t tri&#x1EC3;n ra b&#xEA;n ngo&#xE0;i .</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Enduser kh&#xF4;ng c&#xF3; &#xA0;&#xA0;&#x111;&#x1ED9;i ng&#x169; qu&#x1EA3;n l&#xFD; v&#xE0; l&#xE0;m offshore chuy&#xEA;n nghi&#x1EC7;p</td>
+<td>C&#xF4;ng ty s&#x1EED; d&#x1EE5;ng ph&#x1EA7;n m&#x1EC1;m ph&#x1EE5;c v&#x1EE5; cho m&#x1EE5;c &#x111;&#xED;ch kinh doanh ch&#xED;nh, nh&#x1B0;ng kh&#xF4;ng t&#x1ED5; ch&#x1EE9;c &#x111;&#x1B0;&#x1EE3;c b&#x1ED9; m&#xE1;y c&#xF3; th&#x1EC3; giao vi&#x1EC7;c ph&#xE1;t tri&#x1EC3;n ra ngo&#xE0;i.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>SI nh&#x1ECF; kh&#xF4;ng chuy&#xEA;n nghi&#x1EC7;p</td>
+<td>C&#xF4;ng ty ph&#xE1;t tri&#x1EC3;n c&#x1EE7;a Nh&#x1EAD;t, quy m&#xF4; nh&#x1ECF;, l&#xE0;m vi&#x1EC7;c kh&#xF4;ng theo quy tr&#xEC;nh</td>
+</tr>
+<tr>
+<td>5</td>
+<td>C&#xF4;ng ty th&#x1B0;&#x1A1;ng m&#x1EA1;i</td>
+<td>C&#xF4;ng ty Nh&#x1EAD;t kh&#xF4;ng c&#xF3; nghi&#x1EC7;p v&#x1EE5; ph&#xE1;t tri&#x1EC3;n, m&#xE0; nghi&#x1EC7;p v&#x1EE5; ch&#xED;nh l&#xE0; bu&#xF4;n b&#xE1;n.</td>
+</tr>
+</tbody>
+</table>
+<h1 class="mume-header" id="4n%E1%BB%99i-dung">4.N&#x1ED8;I DUNG</h1>
+
+<h2 class="mume-header" id="41-tr%C3%A1ch-nhi%E1%BB%87m-c%E1%BB%A7a-brseit-comtor-trong-d%E1%BB%B1-%C3%A1n">4.1. Tr&#xE1;ch nhi&#x1EC7;m c&#x1EE7;a Brse/IT Comtor trong d&#x1EF1; &#xE1;n</h2>
+
+<h3 class="mume-header" id="411-vai-tr%C3%B2">4.1.1. Vai tr&#xF2;</h3>
+
+<ol>
+<li>Brse/IT Comtor  c&#xF3; vai tr&#xF2; ch&#xED;nh l&#xE0; ti&#x1EBF;p nh&#x1EAD;n v&#xE0; x&#x1EED; l&#xED; c&#xE1;c th&#xF4;ng tin qua l&#x1EA1;i gi&#x1EEF;a kh&#xE1;ch h&#xE0;ng v&#xE0; &#x111;&#x1ED9;i d&#x1EF1; &#xE1;n, &#x111;&#x1EA3;m b&#x1EA3;o th&#xF4;ng tin &#x111;&#x1B0;&#x1EE3;c truy&#x1EC1;n &#x111;&#x1EA1;t &#x111;&#x1EBF;n ng&#x1B0;&#x1EDD;i c&#x1EA7;n bi&#x1EBF;t &#x201C;ch&#xED;nh x&#xE1;c&#x201D; &#x201D;&#x111;&#x1EE7;&#x201D; &#x201D;k&#x1ECB;p th&#x1EDD;i&#x201D;.</li>
+<li>Support PM qu&#x1EA3;n l&#xFD; d&#x1EF1; &#xE1;n</li>
+<li>B&#x1EB1;ng n&#x103;ng l&#x1EF1;c giao ti&#x1EBF;p v&#xE0; hi&#x1EC3;u bi&#x1EBF;t c&#x1EE7;a m&#xEC;nh &#x111;&#x1EC3; &#x111;i&#x1EC1;u ti&#x1EBF;t th&#xF4;ng tin hi&#x1EC7;u qu&#x1EA3;, m&#x1EC1;m d&#x1EBB;o, gi&#x1EA3;m thi&#x1EC3;u c&#xE1;c xung &#x111;&#x1ED9;t giao ti&#x1EBF;p do kh&#xE1;c bi&#x1EC7;t v&#x103;n h&#xF3;a, c&#xE1;ch t&#x1B0; duy gi&#x1EEF;a kh&#xE1;ch h&#xE0;ng v&#xE0; &#x111;&#x1ED9;i d&#x1EF1; &#xE1;n</li>
+<li>L&#xE0; ng&#x1B0;&#x1EDD;i ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m ch&#x103;m s&#xF3;c kh&#xE1;ch h&#xE0;ng &#x1EDF; c&#x1EA5;p &#x111;&#x1ED9; d&#x1EF1; &#xE1;n khi kh&#xE1;ch h&#xE0;ng sang Vi&#x1EC7;t Nam hay khi Brse/IT Comtor onsite &#x1EDF; Nh&#x1EAD;t.</li>
+</ol>
+<h3 class="mume-header" id="412-gi%E1%BB%9Bi-h%E1%BA%A1n-ph%E1%BA%A1m-vi-tr%C3%A1ch-nhi%E1%BB%87m-c%E1%BB%A7a-brseit-comtor">4.1.2. Gi&#x1EDB;i h&#x1EA1;n ph&#x1EA1;m vi tr&#xE1;ch nhi&#x1EC7;m c&#x1EE7;a Brse/IT Comtor</h3>
+
+<ol>
+<li>Gi&#x1EEF; th&#xE1;i &#x111;&#x1ED9; l&#x1ECB;ch s&#x1EF1;, &#x111;&#xFA;ng manner ( ki&#x1EC3;u Nh&#x1EAD;t ) v&#x1EDB;i kh&#xE1;ch h&#xE0;ng trong t&#x1EA5;t c&#x1EA3; c&#xE1;c giao ti&#x1EBF;p. Tuy&#x1EC7;t &#x111;&#x1ED1;i kh&#xF4;ng giao ti&#x1EBF;p su&#x1ED3;ng s&#xE3; ho&#x1EB7;c &#x201C;c&#xE3;i nhau&#x201D; ki&#x1EC3;u b&#x1EA1;n b&#xE8;</li>
+<li>Kh&#xF4;ng che gi&#x1EA5;u c&#xE1;c th&#xF4;ng tin v&#x1EC1; r&#x1EE7;i ro &amp; v&#x1EA5;n &#x111;&#x1EC1; v&#xEC; b&#x1EA5;t c&#x1EE9; l&#xED; do g&#xEC; v&#x1EDB;i PM d&#x1EF1; &#xE1;n. Vi&#x1EC7;c th&#xF4;ng tin risk &amp; v&#x1EA5;n &#x111;&#x1EC1; cho kh&#xE1;ch h&#xE0;ng th&#x1EF1;c hi&#x1EC7;n theo ch&#x1EC9; th&#x1ECB; c&#x1EE7;a PM.</li>
+<li>Tuy&#x1EC7;t &#x111;&#x1ED1;i &#x111;&#x1EA3;m b&#x1EA3;o s&#x1EF1; trung th&#x1EF1;c c&#x1EE7;a th&#xF4;ng tin truy&#x1EC1;n &#x111;at, kh&#xF4;ng t&#xF9;y ti&#x1EC7;n b&#xF3;p m&#xE9;o theo suy ngh&#x129; c&#x1EE7;a c&#xE1; nh&#xE2;n m&#xEC;nh</li>
+<li>Kh&#xF4;ng h&#x1EE9;a v&#x1EDB;i kh&#xE1;ch h&#xE0;ng c&#xE1;c vi&#x1EC7;c ngo&#xE0;i ph&#x1EA1;m vi c&#xF4;ng vi&#x1EC7;c &amp; quy&#x1EC1;n h&#x1EA1;n c&#x1EE7;a m&#xEC;nh ( v&#x1EDB;i m&#x1EE5;c &#x111;&#xED;ch &#x111;&#x1EC3; kh&#xE1;ch h&#xE0;ng y&#xEA;n t&#xE2;m  ..)</li>
+<li>Kh&#xF4;ng t&#xF9;y ti&#x1EC7;n cung c&#x1EA5;p th&#xF4;ng tin ngo&#xE0;i d&#x1EF1; &#xE1;n (th&#xF4;ng tin c&#xF4;ng ty, d&#x1EF1; &#xE1;n kh&#xE1;c, th&#xF4;ng tin c&#xE1; nh&#xE2;n c&#xF3; li&#xEA;n quan &#x111;&#x1EBF;n c&#xF4;ng ty) cho kh&#xE1;ch h&#xE0;ng</li>
+<li>Kh&#xF4;ng s&#x1EED; d&#x1EE5;ng quan h&#x1EC7; v&#x1EDB;i kh&#xE1;ch h&#xE0;ng ph&#x1EE5;c v&#x1EE5; cho m&#x1EE5;c &#x111;&#xED;ch c&#xE1; nh&#xE2;n trong th&#x1EDD;i gian l&#xE0;m vi&#x1EC7;c &#x1EDF; c&#xF4;ng ty v&#xE0; sau khi ngh&#x1EC9; vi&#x1EC7;c t&#x1EA1;i c&#xF4;ng ty</li>
+</ol>
+<h2 class="mume-header" id="42-n%E1%BB%99i-dung-chi-ti%E1%BA%BFt-c%C3%B4ng-vi%E1%BB%87c">4.2. N&#x1ED9;i dung chi ti&#x1EBF;t c&#xF4;ng vi&#x1EC7;c</h2>
+
+<h3 class="mume-header" id="421-kh%E1%BB%9Fi-t%E1%BA%A1o-d%E1%BB%B1-%C3%A1n-support-pm-d%E1%BB%B1-%C3%A1n">4.2.1. Kh&#x1EDF;i t&#x1EA1;o d&#x1EF1; &#xE1;n (Support PM d&#x1EF1; &#xE1;n)</h3>
+
+<table>
+<thead>
+<tr>
+<th>T&#xEA;n c&#xF4;ng vi&#x1EC7;c</th>
+<th>Gi&#x1EA3;i th&#xED;ch/Chi ti&#x1EBF;t c&#xF4;ng vi&#x1EC7;c</th>
+<th>Ch&#xFA; &#xFD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X&#xE1;c nh&#x1EAD;n INPUT/OUTPUT</td>
+<td>C&#x103;n c&#x1EE9; v&#xE0;o t&#xE0;i li&#x1EC7;u b&#xE0;n giao d&#x1EF1; &#xE1;n v&#xE0; trao &#x111;&#x1ED5;i kh&#xE1;ch h&#xE0;ng x&#xE1;c &#x111;&#x1ECB;nh r&#xF5; 2 n&#x1ED9;i dung d&#x1B0;&#x1EDB;i &#x111;&#xE2;y</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>C&#xE1;c t&#xE0;i li&#x1EC7;u INPUT (Require, source code c&#x169;, DB &#x2026;)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>C&#xE1;c OUTPUT c&#x1EE7;a d&#x1EF1; &#xE1;n bao g&#x1ED3;m c&#x1EA3; c&#xE1;c output trung gian v&#xE0; danh s&#xE1;ch c&#xE1;c s&#x1EA3;n ph&#x1EA9;m ph&#x1EA3;i b&#xE0;n giao cho kh&#xE1;ch h&#xE0;ng.</td>
+<td>C&#x1EA7;n l&#x1B0;u b&#x1EB1;ng ch&#x1EE9;ng th&#x1ED1;ng nh&#x1EA5;t nh&#x1EAD;n th&#x1EE9;c gi&#x1EEF;a Kh&#xE1;ch h&#xE0;ng v&#xE0; Amela &#x111;&#x1EC1; ph&#xF2;ng tranh c&#xE3;i sau n&#xE0;y</td>
+</tr>
+<tr>
+<td>X&#xE1;c &#x111;&#x1ECB;nh c&#xE1;c &#x111;i&#x1EC1;u ki&#x1EC7;n m&#xF4;i tr&#x1B0;&#x1EDD;ng ph&#xE1;t tri&#x1EC3;n</td>
+<td>Confirm v&#x1EDB;i kh&#xE1;ch h&#xE0;ng v&#x1EC1; m&#xF4;i tr&#x1B0;&#x1EDD;ng ph&#xE1;t tri&#x1EC3;n c&#x1EE7;a d&#x1EF1; &#xE1;n</td>
+<td></td>
+</tr>
+<tr>
+<td>X&#xE1;c &#x111;&#x1ECB;nh c&#x1A1; c&#x1EA5;u d&#x1EF1; &#xE1;n v&#xE0; c&#xE1;c th&#xE0;nh vi&#xEA;n li&#xEA;n quan</td>
+<td>X&#xE1;c &#x111;&#x1ECB;nh r&#xF5; rang c&#xE1;c b&#xEA;n li&#xEA;n quan c&#x1EE7;a d&#x1EF1; &#xE1;n v&#x1EC1; ph&#xED;a kh&#xE1;ch h&#xE0;ng (PM c&#x1EE7;a kh&#xE1;ch h&#xE0;ng, TL c&#x1EE7;a kh&#xE1;ch h&#xE0;ng &#x2026;) v&#xE0; ph&#xED;a Amela (Teamleader, DEV &#x2026;)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="422-l%E1%BA%ADp-k%E1%BA%BF-ho%E1%BA%A1ch-d%E1%BB%B1-%C3%A1n">4.2.2. L&#x1EAD;p k&#x1EBF; ho&#x1EA1;ch d&#x1EF1; &#xE1;n</h3>
+
+<table>
+<thead>
+<tr>
+<th>T&#xEA;n c&#xF4;ng vi&#x1EC7;c</th>
+<th>Gi&#x1EA3;i th&#xED;ch/Chi ti&#x1EBF;t c&#xF4;ng vi&#x1EC7;c</th>
+<th>Ch&#xFA; &#xFD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confirm Estimate c&#x1EE7;a PM</td>
+<td>Confirm estimate c&#x1EE7;a PM. M&#x1EE5;c &#x111;&#xED;ch &#x111;&#x1EC3; confirm c&#x103;n c&#x1EE9; estimate c&#x1EE7;a PM chu&#x1EA9;n b&#x1ECB; tinh th&#x1EA7;n trao &#x111;&#x1ED5;i v&#x1EDB;i kh&#xE1;ch h&#xE0;ng</td>
+<td>Estimate ph&#x1EA3;i d&#x1EF1;a tr&#xEA;n y&#xEA;u c&#x1EA7;u ch&#x1EE9;c n&#x103;ng, v&#xE0; c&#xE1;c y&#x1EBF;u t&#x1ED1; qu&#x1EA3;n tr&#x1ECB; kh&#xE1;c nh&#x1B0; risk (k&#x129; thu&#x1EAD;t, nh&#xE2;n s&#x1EF1; &#x2026;), backup, &#x111;&#xE0;o t&#x1EA1;o &#x2026; n&#xEA;n khi ti&#x1EBF;p nh&#x1EAD;n th&#xF4;ng tin PM tr&#x1B0;&#x1EDB;c khi b&#xE1;o c&#xE1;o cho kh&#xE1;ch h&#xE0;ng Brse/IT Comtor c&#x1EA7;n ch&#x1EE7; &#x111;&#x1ED9;ng check l&#x1EA1;i v&#x1EDB;i PM v&#x1EC1; n&#x1ED9;i dung n&#xE0;y</td>
+</tr>
+<tr>
+<td>Support l&#x1EAD;p k&#x1EBF; ho&#x1EA1;ch d&#x1EF1; &#xE1;n</td>
+<td>Suport PM th&#x1EF1;c hi&#x1EC7;n l&#x1EAD;p k&#x1EBF; ho&#x1EA1;ch d&#x1EF1; &#xE1;n, &#x111;&#x1EB7;c bi&#x1EC7;t &#x1EDF; c&#xE1;c quy tr&#xEC;nh li&#xEA;n quan t&#x1EDB;i requirement, QA, communication , (C&#xE1;c quy t&#x1EAF;c ph&#x1B0;&#x1A1;ng ph&#xE1;p giao ti&#x1EBF;p trong n&#x1ED9;i b&#x1ED9; v&#xE0; v&#x1EDB;i kh&#xE1;ch h&#xE0;ng) , quy tr&#xEC;nh CM</td>
+<td>&#x110;&#x1EB7;c bi&#x1EC7;t quan tr&#x1ECD;ng &#x1EDF; quy tr&#xEC;nh qu&#x1EA3;n l&#xFD; requirement, Brse/IT Comtor ph&#x1EA3;i l&#xE0; ng&#x1B0;&#x1EDD;i l&#xEA;n quy tr&#xEC;nh n&#xE0;y.</td>
+</tr>
+<tr>
+<td>Confirm schedule</td>
+<td>Confirm v&#x1EDB;i PM v&#x1EA5;n &#x111;&#x1EC1; li&#xEA;n quan t&#x1EDB;i schedule, c&#xE1;c milestones, k&#x1EBF; ho&#x1EA1;ch n&#x1ED9;p h&#xE0;ng &#x111;&#x1EC3; n&#x1EAF;m t&#xEC;nh h&#xEC;nh t&#x1B0;&#x1A1;ng &#x111;&#x1B0;&#x1A1;ng v&#x1EDB;i PM, b&#xE1;o c&#xE1;o v&#x1EDB;i kh&#xE1;ch h&#xE0;ng</td>
+<td>T&#x1B0;&#x1A1;ng t&#x1EF1; nh&#x1B0; confirm estimate. Brse/IT Comtor kh&#xF4;ng &#x111;&#x1A1;n thu&#x1EA7;n nh&#x1EAD;n th&#xF4;ng tin, h&#xE3;y &#x111;&#x1EE9;ng &#x1EDF; vai tr&#xF2; kh&#xE1;ch h&#xE0;ng &#x111;&#x1EC3; ph&#x1EA3;n bi&#x1EC7;n PM</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="423-startup-d%E1%BB%B1-%C3%A1n">4.2.3. Startup d&#x1EF1; &#xE1;n</h3>
+
+<table>
+<thead>
+<tr>
+<th>T&#xEA;n c&#xF4;ng vi&#x1EC7;c</th>
+<th>Gi&#x1EA3;i th&#xED;ch/Chi ti&#x1EBF;t c&#xF4;ng vi&#x1EC7;c</th>
+<th>Ch&#xFA; &#xFD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H&#x1ECD;p require v&#x1EDB;i kh&#xE1;ch h&#xE0;ng</td>
+<td>Tr&#x1B0;&#x1EDB;c khi h&#x1ECD;p, ph&#x1EA3;i confirm t&#xED;nh &#x111;&#xFA;ng &#x111;&#x1EAF;n c&#x1EE7;a requirement, kh&#xF4;ng &#x111;&#x1A1;n thu&#x1EA7;n l&#xE0; hi&#x1EC3;u c&#xE2;u ch&#x1EEF;. C&#x1EA7;n &#x111;&#x1EB7;t ch&#x1EC9; ti&#xEA;u bao nhi&#xEA;u QA/pages &#x111;&#x1EC3; ra &#x111;&#x1B0;&#x1EE3;c s&#x1ED1; QA h&#x1ECF;i kh&#xE1;ch h&#xE0;ng lu&#xF4;n, clear require &#x1EDF; m&#x1EE9;c m&#x1ECB;n (c&#xF3; th&#x1EC3; design &#x111;&#x1B0;&#x1EE3;c, code &#x111;&#x1B0;&#x1EE3;c) tr&#x1B0;&#x1EDB;c khi chuy&#x1EC3;n l&#x1EA1;i cho team.</td>
+<td>Th&#xF4;ng th&#x1B0;&#x1EDD;ng estimate s&#x1EBD; b&#x1ECB; thay &#x111;&#x1ED5;i khi nh&#x1EAD;n require chi ti&#x1EBF;t. Brse/IT Comtor ph&#x1EA3;i ch&#x1EE7; &#x111;&#x1ED9;ng &#x111;&#xE1;nh gi&#xE1; &#x111;&#x1B0;&#x1EE3;c &#x111;&#x1ED9; &#x1EA3;nh h&#x1B0;&#x1EDF;ng c&#x1EE7;a vi&#x1EC7;c bi&#x1EBF;n &#x111;&#x1ED9;ng n&#xE0;y th&#xF4;ng b&#xE1;o cho PM &#x111;&#x1EC3; PM l&#xEA;n ph&#x1B0;&#x1A1;ng &#xE1;n x&#x1EED; l&#xFD;, c&#xF3; th&#x1EC3; trao &#x111;&#x1ED5;i lu&#xF4;n trong bu&#x1ED5;i h&#x1ECD;p require. L&#x1B0;u &#xFD; c&#xE1;c y&#xEA;u c&#x1EA7;u phi t&#xED;nh n&#x103;ng (performance, security, t&#xE0;i li&#x1EC7;u &#x2026;) c&#x169;ng l&#xE0; &#x111;&#x1ED1;i t&#x1B0;&#x1EE3;ng confirm</td>
+</tr>
+<tr>
+<td>Gi&#x1EA3;ng require cho DEV</td>
+<td>C&#x1EA7;n n&#x1EAF;m r&#xF5; y&#xEA;u c&#x1EA7;u v&#xE0; truy&#x1EC1;n &#x111;&#x1EA1;t l&#x1EA1;i cho team. Th&#x1ED1;ng nh&#x1EA5;t logic x&#x1EED; l&#xFD; trong code v&#xE0; trong design, quan &#x111;i&#x1EC3;m test v&#x1EDB;i DEV</td>
+<td>Kh&#xF4;ng &#x111;&#x1A1;n thu&#x1EA7;n l&#xE0; truy&#x1EC1;n &#x111;&#x1EA1;t th&#xF4;ng th&#x1B0;&#x1EDD;ng. H&#xE3;y &#x111;&#x1EB7;t c&#xE2;u h&#x1ECF;i confirm &#xFD; hi&#x1EC3;u c&#x1EE7;a DEV, h&#xE3;y support DEV v&#x1EC1; c&#xE1;ch design, code, test &#x111;&#x1EC3; DEV &#x111;&#x1EE1; m&#x1EA5;t th&#x1EDD;i gian ngh&#x129; logic, qua &#x111;&#xF3; t&#x103;ng n&#x103;ng su&#x1EA5;t d&#x1EF1; &#xE1;n</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="424-d%E1%BB%B1-%C3%A1n-ch%E1%BA%A1y-%E1%BB%95n-%C4%91%E1%BB%8Bnh">4.2.4. D&#x1EF1; &#xE1;n ch&#x1EA1;y &#x1ED5;n &#x111;&#x1ECB;nh</h3>
+
+<table>
+<thead>
+<tr>
+<th>T&#xEA;n c&#xF4;ng vi&#x1EC7;c</th>
+<th>Gi&#x1EA3;i th&#xED;ch/Chi ti&#x1EBF;t c&#xF4;ng vi&#x1EC7;c</th>
+<th>Ch&#xFA; &#xFD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qu&#x1EA3;n l&#xFD; require</td>
+<td>Th&#x1EF1;c hi&#x1EC7;n qu&#x1EA3;n l&#xFD; requirement theo &#x111;&#xFA;ng nh&#x1B0; quy tr&#xEC;nh trong b&#x1EA3;ng k&#x1EBF; ho&#x1EA1;ch d&#x1EF1; &#xE1;n.</td>
+<td>Tr&#x1B0;&#x1EDD;ng h&#x1EE3;p c&#xF3; thay &#x111;&#x1ED5;i require, ph&#x1EA3;i n&#x1EAF;m ch&#x1EAF;c ph&#x1EA7;n thay &#x111;&#x1ED5;i, &#x111;&#xE1;nh gi&#xE1; c&#xF9;ng PM , PL, TL v&#x1EC1; m&#x1EE9;c &#x111;&#x1ED9; &#x1EA3;nh h&#x1B0;&#x1EDF;ng c&#x1EE7;a CR &#x111;&#x1ED1;i v&#x1EDB;i scope v&#xE0; k&#x1EBF; ho&#x1EA1;ch chung -  &#x110;&#x1EA3;m b&#x1EA3;o ng&#x1B0;&#x1EDD;i ph&#x1EE5; tr&#xE1;ch li&#xEA;n quan &#x111;&#x1EBF;n n&#x1ED9;i dung thay &#x111;&#x1ED5;i bi&#x1EBF;t v&#xE0; &#x111;&#xE3; c&#xF3; k&#x1EBF; ho&#x1EA1;ch x&#x1EED; l&#xED;.(Ph&#xF2;ng tr&#x1B0;&#x1EDD;ng h&#x1EE3;p miss require )</td>
+</tr>
+<tr>
+<td>X&#x1EED; l&#xFD; QA</td>
+<td>Qu&#x1EA3;n l&#xFD; vi&#x1EC7;c QA &#x111;&#xE3; th&#x1EF1;c hi&#x1EC7;n &#x111;&#xFA;ng quy tr&#xEC;nh hay ch&#x1B0;a. Confirm t&#xED;nh &#x111;&#xFA;ng &#x111;&#x1EAF;n c&#x1EE7;a QA. Trao &#x111;&#x1ED5;i QA v&#x1EDB;i kh&#xE1;ch h&#xE0;ng</td>
+<td>Brse/IT Comtor n&#x1EAF;m &#x111;&#x1B0;&#x1EE3;c require th&#xEC; s&#x1EBD; gi&#x1EA3;m &#x111;&#x1B0;&#x1EE3;c &#x111;&#xE1;ng k&#x1EC3; th&#x1EDD;i gian v&#xE0; c&#xF4;ng s&#x1ED1; cho b&#x1B0;&#x1EDB;c n&#xE0;y. N&#xEA;n c&#x1ED1; g&#x1EAF;ng x&#x1EED; l&#xED; &#x111;&#x1B0;&#x1EE3;c t&#x1ED1;i thi&#x1EC3;u 50% c&#xE1;c QA &#x111;&#x1B0;a l&#xEA;n t&#x1EEB; DEV, c&#xF2;n l&#x1EA1;i m&#x1EDB;i chuy&#x1EC3;n x&#xE1;c nh&#x1EAD;n c&#x1EE7;a kh&#xE1;ch h&#xE0;ng. Tuy nhi&#xEA;n, c&#x1EA7;n &#x111;&#x1EA3;m b&#x1EA3;o th&#xF4;ng tin tr&#x1EA3; cho DEV ph&#x1EA3;i ch&#x1EAF;c ch&#x1EAF;n c&#xF3; c&#x103;n c&#x1EE9; x&#xE1;c th&#x1EF1;c, kh&#xF4;ng t&#xF9;y ti&#x1EC7;n ph&#xE1;n &#x111;o&#xE1;n theo ch&#x1EE7; &#xFD; c&#xE1; nh&#xE2;n, ch&#x1EC9; c&#x1EA7;n h&#x1A1;i nghi ng&#x1EDD; c&#x169;ng ph&#x1EA3;i x&#xE1;c nh&#x1EAD;n v&#x1EDB;i kh&#xE1;ch h&#xE0;ng. L&#xFA;c &#x111;&#xF3; c&#xF3; th&#x1EC3; tr&#x1EA3; l&#x1EDD;i tr&#x1B0;&#x1EDB;c cho DEV, nh&#x1B0;ng ph&#x1EA3;i k&#xE8;m theo comment &#x201C;t&#xF4;i kh&#xF4;ng ch&#x1EAF;c 100%, s&#x1EBD; x&#xE1;c nh&#x1EAD;n ti&#x1EBF;p v&#x1EDB;i kh&#xE1;ch h&#xE0;ng &#x201D;</td>
+</tr>
+<tr>
+<td>Ki&#x1EC3;m tra output theo n&#xF4;&#x323;i dung &#x111;a&#x303; th&#xF4;&#x301;ng nh&#xE2;&#x301;t v&#x1A1;&#x301;i KH: ki&#xEA;&#x309;m tra s&#xF4;&#x301; l&#x1B0;&#x1A1;&#x323;ng, ch&#xE2;&#x301;t l&#x1B0;&#x1A1;&#x323;ng</td>
+<td>V&#x1EDB;i Brse/IT Comtor bi&#x1EBF;t k&#x129; thu&#x1EAD;t th&#xEC; c&#xF3; th&#x1EC3; ki&#x1EC3;m tra output b&#x1EB1;ng c&#xE1;ch review source- V&#x1EDB;i Brse/IT Comtor chuy&#xEA;n nghi&#x1EC7;p v&#x1EE5;: th&#xEC; c&#xF3; th&#x1EC3; ki&#x1EC3;m tra b&#x1EB1;ng c&#xE1;ch test d&#x1B0;&#x1EDB;i d&#x1EA1;ng user ph&#x1EA7;n require li&#xEA;n quan ho&#x1EB7;c ki&#x1EC3;m tra b&#x1EB1;ng ch&#x1EE9;ng test xem &#x111;&#xE3; &#x111;&#x1EA3;m b&#x1EA3;o h&#x1EBF;t c&#xE1;c case c&#x1EA7;n test ch&#x1B0;a.- Check s&#x1EA3;n ph&#x1EA9;m d&#x1ECB;ch n&#x1ED9;p h&#xE0;ng: + S&#x1ED1; l&#x1B0;&#x1EE3;ng file+ Format</td>
+<td>Brse/IT Comtor kh&#xE1;c COMter &#x1EDF; ch&#x1ED7; ki&#x1EC3;m so&#xE1;t &#x111;&#x1B0;&#x1EE3;c ch&#x1EA5;t l&#x1B0;&#x1EE3;ng &#x111;&#x1EA7;u v&#xE0;o v&#xE0; output &#x111;&#x1EA7;u ra. Do &#x111;&#xF3; Brse/IT Comtor nh&#x1EA5;t thi&#x1EBF;t ph&#x1EA3;i l&#xEA;n k&#x1EBF; ho&#x1EA1;ch, c&#x1EA7;n &#x111;&#x1ED1;i ngu&#x1ED3;n l&#x1EF1;c &#x111;&#x1EC3; ki&#x1EC3;m tra &#x111;&#x1B0;&#x1EE3;c ch&#x1EA5;t l&#x1B0;&#x1EE3;ng s&#x1EA3;n ph&#x1EA9;m</td>
+</tr>
+<tr>
+<td>Qu&#x1EA3;n l&#xFD; ti&#x1EBF;n &#x111;&#x1ED9;</td>
+<td>Th&#xF4;ng th&#x1B0;&#x1EDD;ng team c&#xF3; schedule n&#x1ED9;i b&#x1ED9; v&#xE0; schedule kh&#xE1;ch h&#xE0;ng. Brse/IT Comtor th&#x1EF1;c hi&#x1EC7;n qu&#x1EA3;n l&#xFD; schedule kh&#xE1;ch h&#xE0;ng, check ti&#x1EBF;n &#x111;&#x1ED9; h&#xE0;ng ng&#xE0;y v&#x1EDB;i member &#x111;&#x1EC3; n&#x1EAF;m t&#xEC;nh h&#xEC;nh d&#x1EF1; &#xE1;n t&#x1B0;&#x1A1;ng &#x111;&#x1B0;&#x1A1;ng PM &#x111;&#x1EC3; b&#xE1;o c&#xE1;o kh&#xE1;ch h&#xE0;ng</td>
+<td>Tr&#x1B0;&#x1EDD;ng h&#x1EE3;p ch&#x1EC9; c&#xF3; 1 schedule th&#xEC; Brse/IT Comtor c&#x169;ng qu&#x1EA3;n l&#xFD; ti&#x1EBF;n &#x111;&#x1ED9; c&#x1EE7;a schedule n&#xE0;y</td>
+</tr>
+<tr>
+<td>H&#xF4;&#x303; tr&#x1A1;&#x323; PM trong vi&#xEA;&#x323;c qua&#x309;n ly&#x301; ti&#xEA;&#x301;n &#x111;&#xF4;&#x323;, v&#xE2;&#x301;n &#x111;&#xEA;&#x300;, risk</td>
+<td>+ B&#xE1;o c&#xE1;o risk v&#x1EC1; m&#x1EB7;t require (nghi&#x1EC7;p v&#x1EE5; kh&#xF3;, logic ph&#x1EE9;c t&#x1EA1;p&#x2026;) cho PM m&#x1ED7;i khi b&#xE0;n giao require v&#x1EC1; cho nh&#xF3;m. C&#xE1;c risk kh&#xE1;c (v&#xED; d&#x1EE5; kh&#xE1;ch h&#xE0;ng A tr&#x1EA3; l&#x1EDD;i QA ch&#x1EAD;m, require c&#xF3; th&#x1EC3; tr&#x1EC5; &#x2026;) d&#x1EF1;a tr&#xEA;n ph&#xE1;n &#x111;o&#xE1;n c&#x1EE7;a Brse/IT Comtor+ B&#xE1;o c&#xE1;o v&#x1EC1; v&#x1EA5;n &#x111;&#x1EC1; trong d&#x1EF1; &#xE1;n: D&#x1EF1;a tr&#xEA;n theo d&#xF5;i ti&#x1EBF;n &#x111;&#x1ED9; mapping v&#x1EDB;i k&#x1EBF; ho&#x1EA1;ch n&#x1ED9;p h&#xE0;ng, d&#x1EF1;a tr&#xEA;n vi&#x1EC7;c review output &#x111;&#x1EA7;u ra c&#x1EE7;a Brse/IT Comtor, d&#x1EF1;a tr&#xEA;n ch&#x1EA5;t l&#x1B0;&#x1EE3;ng v&#xE0; t&#xEC;nh tr&#x1EA1;ng QA&#x2026;</td>
+<td>N&#x1EBF;u v&#x1EA5;n &#x111;&#x1EC1; n&#x1EB1;m &#x1EDF; KH (require ch&#x1EAD;m update, ch&#x1EAD;m tr&#x1EA3; l&#x1EDD;i QA&#x2026;)  ph&#x1EA3;i li&#xEA;n l&#x1EA1;c v&#xE0; y&#xEA;u c&#x1EA7;u KH s&#x1EDB;m, sao cho KH ph&#x1EA3;i n&#x1EAF;m &#x111;&#x1B0;&#x1EE3;c vi&#x1EC7;c ch&#x1EAD;m tr&#x1EA3; l&#x1EDD;i c&#xF3; th&#x1EC3; &#x1EA3;nh h&#x1B0;&#x1EDF;ng &#x111;&#x1EBF;n deadline</td>
+</tr>
+<tr>
+<td>&#x110;i&#xEA;&#x300;u ti&#xEA;&#x301;t m&#xEA;&#x300;m de&#x309;o ca&#x301;c xung &#x111;&#xF4;&#x323;t pha&#x301;t sinh gi&#x1B0;&#x303;a KH va&#x300; team pha&#x301;t tri&#xEA;&#x309;n</td>
+<td>Brse/IT Comtor l&#xE0; ng&#x1B0;&#x1EDD;i &#x111;&#x1EE9;ng trung gian c&#xF3; kh&#x1EA3; n&#x103;ng quan s&#xE1;t v&#x1EA5;n &#x111;&#x1EC1; t&#x1ED1;t nh&#x1EA5;t, n&#xEA;n c&#x169;ng d&#x1EC5; ph&#xE1;t hi&#x1EC7;n ra nh&#x1EEF;ng v&#x1EA5;n &#x111;&#x1EC1; nh&#x1B0;: ph&#x1EA3;n &#xE1;nh kh&#xE1;ch hang, th&#xE1;i &#x111;&#x1ED9; kh&#xE1;ch hang, c&#xE1;c &#x111;i&#x1EC3;m t&#x1ED3;n t&#x1EA1;i c&#x1EE7;a nh&#xF3;m&#x2026;etc, nhanh ch&#xF3;ng b&#xE1;o c&#xE1;o cho PMO, AM ngay sau khi ph&#xE1;t hi&#x1EC7;n v&#x1EA5;n &#x111;&#x1EC1; ho&#x1EB7;c c&#x1EA3;m nh&#x1EAD;n ch&#x1EAF;c ch&#x1EAF;n s&#x1EBD; c&#xF3; v&#x1EA5;n &#x111;&#x1EC1;.</td>
+<td>C&#x1EA7;n tr&#xE1;nh nh&#x1EEF;ng c&#x1EA3;m quan phi&#x1EBF;n di&#x1EC7;n c&#xF3; th&#x1EC3; g&#xE2;y &#x1EA3;nh h&#x1B0;&#x1EDF;ng &#x111;&#x1EBF;n nh&#xF3;m. VD qu&#xE1; nghi&#xEA;ng v&#x1EC1; support kh&#xE1;ch h&#xE0;ng, t&#x1EF1; nh&#x1EAD;n c&#xF4;ng vi&#x1EC7;c kh&#xF4;ng c&#xF3; s&#x1EF1; trao &#x111;&#x1ED5;i v&#x1EDB;i nh&#xF3;m, &#xE9;p ti&#x1EBF;n &#x111;&#x1ED9;&#x2026;</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="425-n%E1%BB%99p-h%C3%A0ng">4.2.5. N&#x1ED9;p h&#xE0;ng</h3>
+
+<p>Tr&#x1B0;&#x1EDD;ng h&#x1EE3;p &#x111;&#x1EBF;n h&#x1EB9;n m&#xE0; ch&#x1B0;a c&#xF3; th&#x1EC3; n&#x1ED9;p h&#xE0;ng, ngo&#xE0;i vi&#x1EC7;c b&#xE1;o c&#xE1;o c&#xE0;ng s&#x1EDB;m c&#xE0;ng t&#x1ED1;t c&#x1EA7;n c&#xF3; ph&#x1B0;&#x1A1;ng &#xE1;n gi&#x1EA3;i quy&#x1EBF;t thuy&#x1EBF;t ph&#x1EE5;c &#x111;&#x1B0;&#x1EE3;c kh&#xE1;ch h&#xE0;ng. Tr&#xE1;nh t&#xEC;nh tr&#x1EA1;ng ch&#x1EC9; th&#xF4;ng b&#xE1;o &#x111;&#x1A1;n gi&#x1EA3;n vi&#x1EC7;c tr&#x1EC5; h&#x1EB9;n ngay tr&#x1B0;&#x1EDB;c deadline.<br>
+M&#x1ED9;t s&#x1ED1; d&#x1EF1; &#xE1;n c&#xF3; th&#x1EC3; c&#xF2;n t&#x1ED3;n t&#x1EA1;i v&#x1EA5;n &#x111;&#x1EC1; t&#x1EA1;i th&#x1EDD;i &#x111;i&#x1EC3;m n&#x1ED9;p h&#xE0;ng (c&#xF3; th&#x1EC3; l&#xE0; b&#x1EA3;o l&#x1B0;u c&#x1EE7;a kh&#xE1;ch h&#xE0;ng) th&#xEC; c&#x1EA7;n list up to&#xE0;n b&#x1ED9; v&#xE0; th&#xF4;ng b&#xE1;o l&#x1EA1;i cho kh&#xE1;ch ha&#x300;ng t&#xEC;nh tr&#x1EA1;ng x&#x1EED; l&#xFD; c&#x1EE7;a source code t&#x1EA1;i th&#x1EDD;i &#x111;i&#x1EC3;m n&#x1ED9;p h&#xE0;ng.(&#x111;i&#x1EC3;m &#x111;&#xE3; l&#xE0;m &#x111;&#x1B0;&#x1EE3;c, &#x111;i&#x1EC3;m b&#x1EA3;o l&#x1B0;u)</p>
+<table>
+<thead>
+<tr>
+<th>T&#xEA;n c&#xF4;ng vi&#x1EC7;c</th>
+<th>Gi&#x1EA3;i th&#xED;ch/Chi ti&#x1EBF;t c&#xF4;ng vi&#x1EC7;c</th>
+<th>Ch&#xFA; &#xFD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ti&#xEA;&#x301;p nh&#xE2;&#x323;n va&#x300; x&#x1B0;&#x309; ly&#x301; bug KH tra&#x309; v&#xEA;&#x300;</td>
+<td>Ti&#x1EBF;p nh&#x1EAD;n v&#xE0; th&#xF4;ng b&#xE1;o cho nh&#xF3;m. Khi ti&#x1EBF;p nh&#x1EAD;n n&#xEA;n ki&#x1EC3;m tra v&#x1EA5;n &#x111;&#x1EC1; tr&#x1B0;&#x1EDB;c &#x111;&#x1EC3; c&#xF3; h&#x1B0;&#x1EDB;ng gi&#x1EA3;i quy&#x1EBF;t (Vd: t&#xE1;i hi&#x1EC7;n bug, ki&#x1EC3;m tra require t&#x1B0;&#x1A1;ng &#x1EE9;ng, n&#x1EBF;u &#x111;&#x1B0;&#x1EE3;c th&#xEC; xem x&#xE9;t lu&#xF4;n nguy&#xEA;n nh&#xE2;n)</td>
+<td>Brse/IT Comtor s&#x1EBD; l&#xE0; ng&#x1B0;&#x1EDD;i hi&#x1EC3;u require, hi&#x1EC3;u logic nh&#x1EA5;t. Khi ti&#x1EBF;p nh&#x1EAD;n bug, h&#xE3;y ph&#xE1;n &#x111;o&#xE1;n m&#x1EE9;c &#x111;&#x1ED9; &#x1EA3;nh h&#x1B0;&#x1EDF;ng c&#x1EE7;a bug (bug &#x111;&#x1A1;n gi&#x1EA3;n, bug c&#xF3; t&#xED;nh h&#x1EC7; th&#x1ED1;ng&#x2026;)&#x111;&#x1EC3; b&#xE1;o c&#xE1;o PM &#x111;&#x1EC3; tri&#x1EC3;n khai bi&#x1EC7;n ph&#xE1;p &#x111;&#x1EA3;m b&#x1EA3;o ch&#x1EA5;t l&#x1B0;&#x1EE3;ng</td>
+</tr>
+<tr>
+<td>Thu th&#xE2;&#x323;p th&#xF4;ng tin &#x111;a&#x301;nh gia&#x301; cu&#x309;a KH v&#xEA;&#x300; ch&#xE2;&#x301;t l&#x1B0;&#x1A1;&#x323;ng d&#x1B0;&#x323; a&#x301;n</td>
+<td>Sau khi kh&#xE1;ch h&#xE0;ng ph&#xEA; chu&#x1EA9;n th&#xF4;ng b&#xE1;o ho&#xE0;n th&#xE0;nh c&#xF4;ng vi&#x1EC7;c, n&#xEA;n l&#x1EA5;y &#xFD; ki&#x1EBF;n kh&#xE1;ch h&#xE0;ng &#x111;&#x1EC3; c&#x1EA3;i ti&#x1EBF;n cho l&#x1EA7;n sau.</td>
+<td>-----</td>
+</tr>
+</tbody>
+</table>
+<h1 class="mume-header" id="5-c%C3%A1c-ch%C3%BA-%C3%BD-%C4%91%E1%BA%B7c-bi%E1%BB%87t-v%E1%BB%9Bi-t%E1%BB%ABng-lo%E1%BA%A1i-kh%C3%A1ch-h%C3%A0ng-v%C3%A0-lo%E1%BA%A1i-d%E1%BB%B1-%C3%A1n-c%E1%BB%A5-th%E1%BB%83">5. C&#xC1;C CH&#xDA; &#xDD; &#x110;&#x1EB6;C BI&#x1EC6;T V&#x1EDA;I T&#x1EEA;NG LO&#x1EA0;I KH&#xC1;CH H&#xC0;NG V&#xC0; LO&#x1EA0;I D&#x1EF0; &#xC1;N C&#x1EE4; TH&#x1EC2;</h1>
+
+<h2 class="mume-header" id="51-kh%C3%A1ch-h%C3%A0ng-enduser-kh%C3%B4ng-c%C3%B3-%C4%91%E1%BB%99i-ng%C5%A9-qu%E1%BA%A3n-l%C3%BD-v%C3%A0-l%C3%A0m-offshore-chuy%C3%AAn-nghi%E1%BB%87p">5.1. Kh&#xE1;ch h&#xE0;ng enduser kh&#xF4;ng c&#xF3; &#x111;&#x1ED9;i ng&#x169; qu&#x1EA3;n l&#xFD; v&#xE0; l&#xE0;m offshore chuy&#xEA;n nghi&#x1EC7;p</h2>
+
+<ol>
+<li>
+<p>T&#xEC;nh tr&#x1EA1;ng requirement<br>
+a.	Ch&#x1EC9; d&#x1EEB;ng l&#x1EA1;i &#x1EDF; d&#x1EA1;ng &#xFD; t&#x1B0;&#x1EDF;ng r&#x1ED3;i ph&#xED;a Amela v&#x1EEB;a l&#xE0;m v&#x1EEB;a thi&#x1EBF;t k&#x1EBF;.<br>
+b.	Do ch&#x1EC9; l&#xE0; &#xFD; t&#x1B0;&#x1EDF;ng n&#xEA;n kh&#xF4;ng bi&#x1EBF;t r&#xF5; y&#xEA;u c&#x1EA7;u k&#x129; thu&#x1EAD;t &#x111;&#xF2;i h&#x1ECF;i th&#x1EBF; n&#xE0;o n&#xEA;n ph&#x1EA3;i &#x111;&#x1EC1; xu&#x1EA5;t kh&#xE1;ch hang h&#x1B0;&#x1EDB;ng th&#x1EF1;c hi&#x1EC7;n</p>
+</li>
+<li>
+<p>Truy&#x1EC1;n &#x111;&#x1EA1;t require:<br>
+a.	V&#x1EDB;i kh&#xE1;ch hang &#xED;t l&#xE0;m offshore s&#x1EBD; vi&#x1EBF;t t&#xE0;i li&#x1EC7;u kh&#xF4;ng d&#x1EC5; hi&#x1EC3;u v&#xE0; khi gi&#x1EA3;ng require c&#x169;ng kh&#xF4;ng c&#xF3; c&#xE1;ch gi&#x1EA3;ng &#x111;&#x1EC3; n&#x1EAF;m b&#x1EAF;t &#x111;&#x1B0;&#x1EE3;c flow ngay. Do &#x111;&#xF3; c&#x1EA7;n &#x111;&#x1EB7;c bi&#x1EC7;t ch&#xFA; &#xFD; x&#xE1;c nh&#x1EAD;n k&#x129; c&#xE0;ng nh&#x1EEF;ng &#x111;i&#x1EC3;m c&#xF2;n ch&#x1B0;a hi&#x1EC3;u r&#xF5; r&#xE0;ng.</p>
+</li>
+<li>
+<p>T&#xEC;nh tr&#x1EA1;ng qu&#x1EA3;n l&#xFD; deadline:<br>
+a.	Schedule c&#xF3; l&#xFA;c qu&#x1EA3;n l&#xFD; r&#x1EA5;t ch&#x1EB7;t c&#xF3; l&#xFA;c l&#x1EA1;i bu&#xF4;ng l&#x1ECF;ng, thay &#x111;&#x1ED5;i li&#xEA;n t&#x1EE5;c.<br>
+b.	Schedule th&#x1B0;&#x1EDD;ng l&#xE0; b&#xEA;n Amela t&#x1EF1; &#x111;&#x1B0;a ra &#x111;&#x1EC3; kh&#xE1;ch h&#xE0;ng ph&#xEA; chu&#x1EA9;n. Tuy   nhi&#xEA;n c&#xF3; tr&#x1B0;&#x1EDD;ng h&#x1EE3;p KH kh&#xF4;ng theo d&#xF5;i ch&#x1EB7;t ch&#x1EBD; d&#xF9; Amela v&#x1EAB;n b&#xE1;o c&#xE1;o &#x111;&#x1EA7;y &#x111;&#x1EE7;.<br>
+Do &#x111;&#xF3;, ph&#x1EA3;i lu&#xF4;n c&#x1EA3;nh gi&#xE1;c v&#xE0; nh&#x1EAF;c nh&#x1EDF; KH vi&#x1EC7;c &#x111;&#xE3; b&#xE1;o c&#xE1;o v&#x1EC1; plan.</p>
+</li>
+<li>
+<p>Y&#xEA;u c&#x1EA7;u v&#x1EC1; ch&#x1EA5;t l&#x1B0;&#x1EE3;ng:<br>
+a.	Lo&#x1EA1;i KH n&#xE0;y kh&#xF4;ng &#x111;&#xE1;nh gi&#xE1; nhi&#x1EC1;u v&#x1EC1; k&#x129; thu&#x1EAD;t m&#xE0; &#x111;&#xE1;nh gi&#xE1; &#x1EDF; user interface v&#xE0; performance.<br>
+b.	KH th&#x1B0;&#x1EDD;ng ch&#x1EC9; test v&#x1EC1; nghi&#x1EC7;p v&#x1EE5; v&#xE0; d&#x1B0;&#x1EDB;i d&#x1EA1;ng user. Kh&#xF4;ng t&#x1EA1;o testcase chi ti&#x1EBF;t m&#xE0; ch&#x1EC9; gi&#x1EDB;i h&#x1EA1;n &#x1EDF; quan &#x111;i&#x1EC3;m test.<br>
+Do &#x111;&#xF3;, v&#x1EDB;i KH n&#xE0;y th&#xEC; b&#xEA;n Lu c&#xE0;ng ph&#x1EA3;i test k&#x129; v&#xEC; c&#xF3; th&#x1EC3; bug tr&#x1EA3; v&#x1EC1; kh&#xF4;ng nhi&#x1EC1;u nh&#x1B0;ng ti&#x1EC1;m &#x1EA9;n risk khi kh&#xE1;ch hang release l&#xEA;n m&#xF4;i tr&#x1B0;&#x1EDD;ng th&#x1EF1;c t&#x1EBF;.</p>
+</li>
+</ol>
+<h2 class="mume-header" id="52-kh%C3%A1ch-h%C3%A0ng-enduser-c%C3%B3-%C4%91%E1%BB%99i-ng%C5%A9-qu%E1%BA%A3n-l%C3%BD-v%C3%A0-l%C3%A0m-offshore-chuy%C3%AAn-nghi%E1%BB%87p">5.2. Kh&#xE1;ch h&#xE0;ng enduser c&#xF3;  &#x111;&#x1ED9;i ng&#x169; qu&#x1EA3;n l&#xFD; v&#xE0; l&#xE0;m offshore chuy&#xEA;n nghi&#x1EC7;p</h2>
+
+<p>(V&#xED; d&#x1EE5;: SMS)</p>
+<ol>
+<li>
+<p>T&#xEC;nh tr&#x1EA1;ng requirement<br>
+a.	Thi&#x1EBF;t k&#x1EBF; c&#x1A1; b&#x1EA3;n &#x1EDF; m&#x1EE9;c &#x111;&#x1ED9; chi ti&#x1EBF;t, nh&#xEC;n v&#xE0;o c&#xF3; th&#x1EC3; code ngay &#x111;&#x1B0;&#x1EE3;c.<br>
+b.	V&#x103;n phong ng&#x1EAF;n g&#x1ECD;n, d&#x1EC5; hi&#x1EC3;u.<br>
+&#x110;&#xE2;y c&#x169;ng l&#xE0; &#x111;i&#x1EC3;m t&#x1ED1;t khi l&#xE0;m v&#x1EDB;i kh&#xE1;ch h&#xE0;ng n&#xE0;y. Tuy nhi&#xEA;n lo&#x1EA1;i kh&#xE1;ch h&#xE0;ng n&#xE0;y th&#x1B0;&#x1EDD;ng c&#xF3; &#x111;&#x1ED9;i ng&#x169; ph&#xE1;t tri&#x1EC3;n v&#xE0; thi&#x1EBF;t k&#x1EBF; ri&#xEA;ng. V&#x1EDB;i c&#xE1;c h&#x1EC7; th&#x1ED1;ng l&#x1EDB;n &#x111;&#xE3; l&#xE0;m t&#x1EEB; tr&#x1B0;&#x1EDB;c v&#xE0; Amela ch&#x1EC9; l&#xE0;m maintenance, vi&#x1EC7;c thi&#x1EBF;t k&#x1EBF; chi ti&#x1EBF;t ch&#x1EC9; d&#x1EF1;a tr&#xEA;n tr&#xED; nh&#x1EDB; v&#xE0; kh&#xF4;ng xem k&#x129; source (v&#xEC; ng&#x1B0;&#x1EDD;i thi&#x1EBF;t k&#x1EBF; kh&#xF4;ng code) c&#x169;ng c&#xF3; &#x111;i&#x1EC3;m b&#x1EA5;t l&#x1EE3;i cho Lu l&#xE0; ph&#x1EA3;i v&#x1EEB;a soi source v&#x1EEB;a soi require xem mapping nhau kh&#xF4;ng.</p>
+</li>
+<li>
+<p>Truy&#x1EC1;n &#x111;&#x1EA1;t require:<br>
+a.	V&#xEC; l&#xE0;m nhi&#x1EC1;u n&#xEA;n c&#xF3; kinh nghi&#x1EC7;m l&#xE0;m vi&#x1EC7;c v&#x1EDB;i c&#xE1;c &#x111;&#x1ED1;i t&#xE1;c offshore n&#xEA;n truy&#x1EC1;n &#x111;&#x1EA1;t v&#xE0; c&#xE1;ch d&#xF9;ng t&#x1EEB; c&#x169;ng d&#x1EC5; hi&#x1EC3;u h&#x1A1;n.</p>
+</li>
+<li>
+<p>T&#xEC;nh tr&#x1EA1;ng qu&#x1EA3;n l&#xFD; deadline:<br>
+a.	Qu&#x1EA3;n l&#xFD; schedule r&#x1EA5;t ch&#x1EB7;t ch&#x1EBD;. Th&#x1B0;&#x1EDD;ng y&#xEA;u c&#x1EA7;u deadline ch&#x1EE9; kh&#xF4;ng &#x111;&#x1EC3; Lu t&#x1EF1; estimate.<br>
+b.	Soi r&#x1EA5;t k&#x129; plan ph&#xED;a Amela g&#x1EED;i</p>
+</li>
+<li>
+<p>Y&#xEA;u c&#x1EA7;u v&#x1EC1; ch&#x1EA5;t l&#x1B0;&#x1EE3;ng:<br>
+a.	Th&#x1B0;&#x1EDD;ng lo&#x1EA1;i kh&#xE1;ch h&#xE0;ng n&#xE0;y hay c&#xF3; h&#x1EC7; th&#x1ED1;ng l&#x1EDB;n v&#xE0; &#x111;&#xE3; &#x111;i v&#xE0;o s&#x1EED; d&#x1EE5;ng t&#x1EEB; tr&#x1B0;&#x1EDB;c kh&#xE1; l&#xE2;u n&#xEA;n to&#xE0;n b&#x1ED9; c&#xE1;c x&#x1EED; l&#xFD; li&#xEA;n quan &#x111;&#x1EBF;n ph&#x1EA7;n frontend(ph&#x1EA7;n giao ti&#x1EBF;p c&#x1EE7;a KH v&#x1EDB;i enduser c&#x1EE7;a KH) &#x111;&#x1EC1;u c&#xF3; y&#xEA;u c&#x1EA7;u ch&#x1EA5;t l&#x1B0;&#x1EE3;ng r&#x1EA5;t cao. &#x110;&#x1EB7;c bi&#x1EC7;t c&#xE1;c x&#x1EED; l&#xFD; li&#xEA;n quan &#x111;&#x1EBF;n t&#xED;nh to&#xE1;n ti&#x1EC1;n t&#x1EC7;.<br>
+b.	KH n&#xE0;y th&#x1B0;&#x1EDD;ng c&#xF3; y&#xEA;u c&#x1EA7;u v&#x1EC3; t&#xED;nh n&#x103;ng (t&#x1ED1;i &#x1B0;u performance, sercurity&#x2026;)<br>
+c.	S&#x1EA3;n ph&#x1EA9;m n&#x1ED9;p ha&#x300;ng &#x111;&#x1B0;&#x1EE3;c check k&#x129; &#x1EDF; nhi&#x1EC1;u kh&#xE2;u: Test ti&#x1EBF;p nh&#x1EAD;n, Test &#x111;&#xE1;nh gi&#xE1; tr&#xEA;n m&#xF4;i tr&#x1B0;&#x1EDD;ng tr&#x1B0;&#x1EDB;c th&#x1EF1;c t&#x1EBF; b&#x1EDF;i ch&#xED;nh end user r&#x1ED3;i m&#x1EDB;i release th&#x1EAD;t.</p>
+</li>
+</ol>
+<h2 class="mume-header" id="53-kh%C3%A1ch-h%C3%A0ng-l%C3%A0-c%C3%A1c-c%C3%B4ng-ty-th%C6%B0%C6%A1ng-m%E1%BA%A1i">5.3. Kh&#xE1;ch h&#xE0;ng l&#xE0; c&#xE1;c c&#xF4;ng ty th&#x1B0;&#x1A1;ng m&#x1EA1;i</h2>
+
+<p>(V&#xED; d&#x1EE5;:  Nissho Ele)</p>
+<ol>
+<li>
+<p>T&#xEC;nh tr&#x1EA1;ng requirement<br>
+a.	C&#xE1;c c&#xF4;ng ty th&#x1B0;&#x1A1;ng m&#x1EA1;i th&#x1B0;&#x1EDD;ng s&#x1EBD; kh&#xF4;ng c&#xF3; &#x111;&#x1ED9;i ng&#x169; thi&#x1EBF;t k&#x1EBF; chuy&#xEA;n nghi&#x1EC7;p trong c&#xF4;ng ty. Ch&#x1EA5;t l&#x1B0;&#x1EE3;ng requiment ban &#x111;&#x1EA7;u c&#xF3; th&#x1EC3; t&#x1ED1;t do thu&#xEA; c&#xF4;ng ty thi&#x1EBF;t k&#x1EBF; chuy&#xEA;n nghi&#x1EC7;p b&#xEA;n ngo&#xE0;i l&#xE0;m, nh&#x1B0;ng sau &#x111;&#xF3; t&#xEC;nh tr&#x1EA1;ng qu&#x1EA3;n l&#xFD; mainternance requirement &#x111;&#xF3; kh&#xF4;ng t&#x1ED1;t v&#xEC; kh&#xF4;ng c&#xF3; quy tr&#xEC;nh qu&#x1EA3;n l&#xFD; t&#x1ED1;t</p>
+</li>
+<li>
+<p>Truy&#x1EC1;n &#x111;&#x1EA1;t require:<br>
+a.	Nh&#x1EEF;ng n&#x1ED9;i dung s&#xE2;u , g&#x1EA7;n s&#xE1;t v&#x1EDB;i code th&#xEC; c&#xF3; kh&#x1EA3; n&#x103;ng kh&#xE1;ch h&#xE0;ng kh&#xF4;ng n&#x103;m &#x111;&#x1B0;&#x1EE3;c do ng&#x1B0;&#x1EDD;i ph&#x1EE5; tr&#xE1;ch kh&#xF4;ng ph&#x1EA3;i l&#xE0; l&#xE0;m ra thi&#x1EBF;t k&#x1EBF; v&#xE0; c&#x169;ng kh&#xF4;ng ph&#x1EA3;i l&#xE0; ng&#x1B0;&#x1EDD;i hi&#x1EC3;u k&#x129; thu&#x1EAD;t.</p>
+</li>
+<li>
+<p>T&#xEC;nh tr&#x1EA1;ng qu&#x1EA3;n l&#xFD; n&#xF3;i chung v&#xE0; qu&#x1EA3;n l&#xFD; deadline n&#xF3;i ri&#xEA;ng<br>
+a.	Th&#x1B0;&#x1EDD;ng fix deadline cu&#x1ED1;i c&#xF9;ng kh&#xF4;ng th&#x1EC3; thay &#x111;&#x1ED5;i (do &#x111;&#xE3; h&#x1EE9;a v&#x1EDB;i user ), nh&#x1B0;ng trong qu&#xE1; tr&#xEC;nh th&#x1EF1;c hi&#x1EC7;n d&#x1EF1; &#xE1;n kh&#xF4;ng c&#xF3; kh&#x1EA3; n&#x103;ng c&#xF9;ng Amela ki&#x1EC3;m so&#xE1;t qu&#x1EA3;n l&#xFD; plan, ch&#x1EC9; khi n&#xE0;o Amela b&#xE1;o tr&#x1EC5; th&#xEC; s&#x1EBD; r&#x1EA5;t ho&#x1EA3;ng lo&#x1EA1;n. Do &#x111;&#xF3; Amela c&#x1EA7;n ph&#x1EA3;i ch&#x1ECB;u tr&#xE1;ch nhi&#x1EC7;m ho&#xE0;n to&#xE0;n v&#x1EC1; vi&#x1EC7;c qu&#x1EA3;n tr&#x1ECB; d&#x1EF1; &#xE1;n , kh&#xE1;ch h&#xE0;ng h&#x1EA7;u nh&#x1B0; kh&#xF4;ng support &#x111;&#x1B0;&#x1EE3;c ph&#x1EA7;n n&#xE0;y.<br>
+b.	Ngo&#xE0;i ra, c&#xE1;c c&#xF4;ng ty th&#x1B0;&#x1A1;ng m&#x1EA1;i c&#x169;ng kh&#xF4;ng c&#xF3; hi&#x1EC3;u bi&#x1EBF;t v&#x1EC1; ph&#xE1;t tri&#x1EC3;n ph&#x1EA7;n m&#x1EC1;m 1 c&#xE1;ch &#x111;&#x1EA7;y &#x111;&#x1EE7; n&#xEA;n nhi&#x1EC1;u khi g&#x1EB7;p kh&#xF3; kh&#x103;n trong giao ti&#x1EBF;p &#x111;&#x1EC3; t&#xEC;m &#x111;&#x1B0;&#x1EE3;c ti&#x1EBF;ng n&#xF3;i chung v&#x1EC1; c&#xE1;ch th&#x1EF1;c hi&#x1EC7;n d&#x1EF1; &#xE1;n .</p>
+</li>
+<li>
+<p>Y&#xEA;u c&#x1EA7;u v&#x1EC1; ch&#x1EA5;t l&#x1B0;&#x1EE3;ng:<br>
+a.	C&#x169;ng gi&#x1ED1;ng nh&#x1B0; c&#xE1;c c&#xF4;ng ty end user , lo&#x1EA1;i kh&#xE1;ch h&#xE0;ng c&#xF4;ng ty th&#x1B0;&#x1A1;ng m&#x1EA1;i n&#xE0;y th&#x1B0;&#x1EDD;ng ch&#x1EC9; test v&#x1EC1; nghi&#x1EC7;p v&#x1EE5; v&#xE0; d&#x1B0;&#x1EDB;i d&#x1EA1;ng user. Kh&#xF4;ng t&#x1EA1;o testcase chi ti&#x1EBF;t m&#xE0; ch&#x1EC9; gi&#x1EDB;i h&#x1EA1;n &#x1EDF; quan &#x111;i&#x1EC3;m test. Do &#x111;&#xF3;, v&#x1EDB;i KH n&#xE0;y th&#xEC; b&#xEA;n Lu c&#xE0;ng ph&#x1EA3;i test k&#x129; v&#xEC; c&#xF3; th&#x1EC3; bug tr&#x1EA3; v&#x1EC1; kh&#xF4;ng nhi&#x1EC1;u nh&#x1B0;ng ti&#x1EC1;m &#x1EA9;n risk khi kh&#xE1;ch hang release l&#xEA;n m&#xF4;i tr&#x1B0;&#x1EDD;ng th&#x1EF1;c t&#x1EBF;<br>
+.</p>
+</li>
+</ol>
+<h2 class="mume-header" id="54-d%E1%BB%B1-%C3%A1n-odc">5.4. D&#x1EF1; &#xE1;n ODC</h2>
+
+<ol>
+<li>T&#xEC;nh tr&#x1EA1;ng requirement<br>
+a.	Th&#x1B0;&#x1EDD;ng c&#xF4;ng vi&#x1EC7;c c&#x1EE7;a nh&#xF3;m ODC s&#x1EBD; l&#xE0; mainternance 1 h&#x1EC7; th&#x1ED1;ng c&#xF3; s&#x1EB5;n (s&#x1EED;a bug ho&#x1EB7;c change require nh&#x1ECF;). T&#xE0;i li&#x1EC7;u kh&#xE1;ch h&#xE0;ng cung c&#x1EA5;p th&#x1B0;&#x1EDD;ng s&#x1EBD; bao g&#x1ED3;m :</li>
+</ol>
+<ul>
+<li>Thi&#x1EBF;t k&#x1EBF; c&#x1EE7;a to&#xE0;n b&#x1ED9; h&#x1EC7; th&#x1ED1;ng  : Th&#x1B0;&#x1EDD;ng b&#x1ECB; l&#x1EA1;c h&#x1EAD;u so v&#x1EDB;i ch&#x1EE9;c n&#x103;ng th&#x1EF1;c t&#x1EBF; c&#x1EE7;a h&#x1EC7; th&#x1ED1;ng do qu&#xE1; tr&#xEC;nh l&#x1ECB;ch s&#x1EED; ch&#x1EC9; ch&#xFA; tr&#x1ECD;ng mainternance h&#x1EC7; th&#x1ED1;ng kh&#xF4;ng mainternance t&#xE0;i li&#x1EC7;u t&#x1B0;&#x1A1;ng &#x1EE9;ng</li>
+<li>Y&#xEA;u c&#x1EA7;u ch&#x1EC9;nh s&#x1EED;a m&#x1EDB;i th&#x1B0;&#x1EDD;ng &#x111;&#x1B0;&#x1EE3;c g&#x1EED;i d&#x1B0;&#x1EDB;i d&#x1EA1;ng m&#xF4; t&#x1EA3; kh&#xE1;i qu&#xE1;t , ho&#x1EB7;c t&#xE0;i li&#x1EC7;u kh&#xE1;i qu&#xE1;t &#x111;&#x103;ng k&#xED; th&#xE0;nh ticket tr&#xEA;n c&#xE1;c h&#x1EC7; th&#x1ED1;ng nh&#x1B0; Trac, redmine &#x2026;</li>
+</ul>
+<ol start="2">
+<li>
+<p>Truy&#x1EC1;n &#x111;&#x1EA1;t require:<br>
+a.	Ng&#x1B0;&#x1EDD;i ph&#x1EE5; tr&#xE1;ch nh&#xF3;m ODC Amela  b&#xEA;n ph&#xED;a kh&#xE1;ch h&#xE0;ng c&#xF3; th&#x1EC3; l&#xE0; ng&#x1B0;&#x1EDD;i kh&#xF4;ng hi&#x1EC3;u k&#x129; thu&#x1EAD;t n&#xEA;n truy&#x1EC1;n &#x111;&#x1EA1;t require ch&#x1EC9; d&#x1EEB;ng &#x1EDF; m&#x1EE9;c gi&#x1EA3;i th&#xED;ch business logic, kh&#xF4;ng focus &#x111;&#x1B0;&#x1EE3;c v&#xE0;o c&#xE1;c require k&#x129; thu&#x1EAD;t kh&#xF3; . Vi&#x1EC7;c trao &#x111;&#x1ED5;i ph&#x1B0;&#x1A1;ng &#xE1;n / solution k&#x129; thu&#x1EAD;t &#x111;&#x1EC3; th&#x1EF1;c hi&#x1EC7;n y&#xEA;u c&#x1EA7;u ng&#x1B0;&#x1EDD;i ph&#x1EE5; tr&#xE1;ch ph&#xED;a kh&#xE1;ch h&#xE0;ng n&#xE0;y th&#x1B0;&#x1EDD;ng g&#x1EB7;p nhi&#x1EC1;u kh&#xF3; kh&#x103;n h&#x1A1;n.<br>
+b.	Tuy nhi&#xEA;n, c&#x169;ng c&#xF3; nh&#x1EEF;ng kh&#xE1;ch h&#xE0;ng ch&#x1EC9; &#x111;&#x1ECB;nh &#x111;&#x1B0;&#x1EE3;c ng&#x1B0;&#x1EDD;i ph&#x1EE5; tr&#xE1;ch nh&#xF3;m ODC hi&#x1EC3;u k&#x129; thu&#x1EAD;t v&#xE0; nghi&#x1EC7;p v&#x1EE5;. Tr&#x1B0;&#x1EDD;ng h&#x1EE3;p n&#xE0;y th&#xEC; trao &#x111;&#x1ED5;i require th&#x1B0;&#x1EDD;ng kh&#xE1; su&#xF4;n s&#x1EBB; .</p>
+</li>
+<li>
+<p>T&#xEC;nh tr&#x1EA1;ng qu&#x1EA3;n l&#xFD; n&#xF3;i chung v&#xE0; qu&#x1EA3;n l&#xFD; deadline n&#xF3;i ri&#xEA;ng<br>
+a.	C&#xE1;c task ODC th&#x1B0;&#x1EDD;ng l&#xE0; task nh&#x1ECF;, c&#xF3; volume d&#x1B0;&#x1EDB;i 1 tu&#x1EA7;n. N&#xEA;n vi&#x1EC7;c b&#xE1;o c&#xE1;o ti&#x1EBF;n &#x111;&#x1ED9; v&#xE0; ki&#x1EC3;m so&#xE1;t plan kh&#xE1; chi ti&#x1EBF;t<br>
+b.	C&#xE1;c d&#x1EF1; &#xE1;n ODC c&#x169;ng ph&#x1EA3;i qu&#x1EA3;n l&#xFD;  v&#xE0; b&#xE1;o c&#xE1;o c&#xF4;ng s&#x1ED1; ch&#x1EB7;t ch&#x1EBD; (v&#xEC; d&#x1EF1; &#xE1;n ODC l&#xE0; d&#x1EF1; &#xE1;n thu&#xEA; nh&#xE2;n s&#x1EF1; ph&#xE1;t tri&#x1EC3;n ch&#x1EE9; kh&#xF4;ng ph&#x1EA3;i estimate kh&#x1ED1;i l&#x1B0;&#x1EE3;ng c&#xF4;ng vi&#x1EC7;c tr&#x1ECD;n g&#xF3;i)</p>
+</li>
+<li>
+<p>Y&#xEA;u c&#x1EA7;u v&#x1EC1; ch&#x1EA5;t l&#x1B0;&#x1EE3;ng:<br>
+Kh&#xF4;ng c&#xF3; ch&#xFA; &#xFD; g&#xEC; &#x111;&#x1EB7;c bi&#x1EC7;t</p>
+</li>
+</ol>
+<h1 class="mume-header" id="6-n%C3%A2ng-cao">6. N&#xE2;ng cao</h1>
+
+<h2 class="mume-header" id="it-phrases">IT Phrases</h2>
+
+<h2 class="mume-header" id="basic-web">Basic web</h2>
+
+<h2 class="mume-header" id="business-mail">Business mail</h2>
+
+<h1 class="mume-header" id="template">Template</h1>
+
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
